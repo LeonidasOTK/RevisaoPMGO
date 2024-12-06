@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direito Constitucional</title>
+	
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        .question {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #e3f2fd;
+            border: 1px solid #90caf9;
+            border-radius: 5px;
+			max-width: 800px;
+			
+            padding: 20px;
+            
+            text-align: left;
+			box-sizing: border-box;  /* Inclui o padding e a borda na largura total */
+			margin-left: auto;  /* Centraliza a caixa */
+			margin-right: auto;
+        }
+        .options button {
+            margin: 5px 0;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #2196f3;
+            color: white;
+        }
+        .options button:hover {
+            background-color: #1565c0;
+        }
+		
+		.options button:active,
+		.options button:focus {
+			background-color: orange;
+		}
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+		
+		.pdf-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40%;
+        }
+
+        embed {
+            width: 80%;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Direito Constitucional</h1>
+<h2>Nacionalidade</h2>
+	  <div class="pdf-container">
+        <embed src="file:///C:/Users/felip/Desktop/Resumo%20Revisao%20PMGO/Direito%20Constitucional/Nacionalidade/Nacionalidade.pdf#page=1" type="application/pdf">
+    </div>
+
+    <div class="question">
+        <p><strong>(IBFC – 2023):</strong> Assinale uma hipótese de brasileiro naturalizado.<br> Nascidos no estrangeiro, de pai ou mãe brasileira, registrados em repartição brasileira competente.</p><br>
+        <div class="options">
+			<button onclick="checkAnswer('correct', 1)">Certo.</button>
+            <button onclick="checkAnswer('incorrect', 1)">Errado.</button>
+        </div>
+        <p id="answer1" class=""></p>
+    </div>
+	
+	<div class="question">
+        <p><strong>(IBFC – 2023):</strong> Assinale uma hipótese de brasileiro naturalizado.<br> Residentes no Brasil há mais de 15 anos ininterruptos e sem condenação penal, 
+		desde que requeiram a nacionalidade brasileira.</p><br>
+        <div class="options">
+            <button onclick="checkAnswer('correct', 3)">Certo.</button>
+			<button onclick="checkAnswer('incorrect', 3)">Errado</button><br>
+            
+        </div>
+        <p id="answer3" class=""></p>
+    </div>
+	<div class="pdf-container">
+        <embed src="file:///C:/Users/felip/Desktop/Resumo%20Revisao%20PMGO/Direito%20Constitucional/Nacionalidade/Nacionalidade.pdf#page=1" type="application/pdf">
+    </div>
+	
+    <h2>Questão sobre a Constituição Federal<br>Direito Político</h2>
+    <div class="question">
+        <p><strong>(IBFC – 2014):</strong> Segundo a Constituição Federal, no capítulo “Dos Direitos Políticos”, são condições de elegibilidade, exceto:</p>
+        <div class="options">
+            <button onclick="checkAnswer('incorrect', 2)">A) O domicílio eleitoral na circunscrição.</button><br>
+            <button onclick="checkAnswer('incorrect', 2)">B) A filiação a partido político com representação no Congresso Nacional.</button><br>
+            <button onclick="checkAnswer('incorrect', 2)">C) A nacionalidade brasileira.</button><br>
+            <button onclick="checkAnswer('correct', 2)">D) O pleno exercício dos direitos políticos.</button>
+        </div>
+        <p id="answer2" class=""></p>
+    </div>
+
+    <script>
+        function checkAnswer(option, questionNumber) {
+            const answerElement = document.getElementById('answer' + questionNumber);
+            if (option === 'correct') {
+                answerElement.textContent = "Resposta correta!";
+                answerElement.className = "correct";
+            } else {
+                answerElement.textContent = "Resposta incorreta. Tente novamente.";
+                answerElement.className = "incorrect";
+            }
+        }
+    </script>
+
+</body>
+</html>
